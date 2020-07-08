@@ -1,10 +1,11 @@
 from room import Room
+from player import Player
 
 # Declare all the rooms
 
 room = {
     'outside':  Room("Outside Cave Entrance",
-                     "North of you, the cave mount beckons"),
+        "North of you, the cave mount beckons"),
 
     'foyer':    Room("Foyer", """Dim light filters in from the south. Dusty
 passages run north and east."""),
@@ -39,6 +40,16 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 
+def set_direction(player, direction):
+    attribute = direction + '_to'
+
+    if hasattr(player.location, attribute):
+        player.location = getattr(player.location, attribute)
+    else:
+        print('oops.... the wall hurts when you hit it. try again')
+
+
+player = Player('bob', room['outside'])
 # Write a loop that:
 #
 # * Prints the current room name
@@ -49,3 +60,13 @@ room['treasure'].s_to = room['narrow']
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+direction = input('what direction do you want to go: ')
+
+while True:
+    print('\n')
+    print(f'Hello {player.name}')
+    print(player.location)
+
+    first_char = input("\nfirst_char: ").strip().lower().split()
+    first_first_char
