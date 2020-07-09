@@ -65,8 +65,23 @@ direction = input('what direction do you want to go: ')
 
 while True:
     print('\n')
-    print(f'Hello {player.name}')
-    print(player.location)
+    print(f'Hello {player.name}, you are in {player.location}')
+
 
     first_char = input("\nfirst_char: ").strip().lower().split()
-    first_first_char
+    first_first_char = first_char[0]
+    first_char = first_first_char[0]
+
+    if first_char == 'q':
+        break
+
+    if first_char == 'n':
+        set_direction(player, first_char)
+    elif first_char == 's':
+        set_direction(player, first_char)
+    elif first_char == 'e':
+        set_direction(player, first_char)
+    elif first_char == 'w':
+        set_direction(player, first_char)
+    else:
+        print('oops wrong entry, try again')
