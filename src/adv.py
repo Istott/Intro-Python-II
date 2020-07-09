@@ -60,28 +60,28 @@ player = Player('bob', room['outside'])
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
-
-direction = input('what direction do you want to go: ')
+# possible_direction('n', 's', 'w', 'e')
+direction = input('Welcome to the haunted Mansion....go north to enter: ')
 
 while True:
     print('\n')
-    print(f'Hello {player.name}, you are in {player.location}')
+    print(f'Hello {player.name}, you are in the {player.location} room.')
 
 
-    first_char = input("\nfirst_char: ").strip().lower().split()
-    first_first_char = first_char[0]
-    first_char = first_first_char[0]
+    command = input("\nWhat would you like to do: ").strip().lower().split()
+    first_char = command[0]
+    command = first_char[0]
 
-    if first_char == 'q':
+    if command == 'q':
         break
 
-    if first_char == 'n':
-        set_direction(player, first_char)
-    elif first_char == 's':
-        set_direction(player, first_char)
-    elif first_char == 'e':
-        set_direction(player, first_char)
-    elif first_char == 'w':
-        set_direction(player, first_char)
+    if command == 'n':
+        set_direction(player, command)
+    elif command == 's':
+        set_direction(player, command)
+    elif command == 'e':
+        set_direction(player, command)
+    elif command == 'w':
+        set_direction(player, command)
     else:
         print('oops wrong entry, try again')

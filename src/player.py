@@ -8,8 +8,8 @@ class Player():
         self.name = name
         self.location = location
     
-    def __str__(self):
-        return f'{self.name} {self.location}'
+    # def try_direction(command):
+    #     attribute = command + '_to'
 
-
-# bob = Player('bob', 'outside')
+    #     if hasattr(self.location, attribute):
+    #         getattr(self.location, attribute)
