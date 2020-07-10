@@ -15,4 +15,10 @@ class Room():
         for i in self.items:
             print(f'{i}')
 
+    def removeRoomItem(self, item):
+        return self.items.remove(item)
+    
+    def addRoomItem(self, item):
+        return self.items.append(item)
+
         
