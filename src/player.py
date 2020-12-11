@@ -9,8 +9,8 @@ class Player():
         self.backpack = backpack
 
     def myItems(self):
-        for i in self.backpack:
-            print(i)
+        for i in range(len(self.backpack)):
+            print(str(i + 1) + '. ', self.backpack[i])
 
     def grabItem(self, item):
         return self.backpack.append(item)

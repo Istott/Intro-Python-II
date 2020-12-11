@@ -99,21 +99,21 @@ while True:
         player.location.itemList()
 
 
-    command = input("\nWhat would you like to do: ").strip().lower().split()
+    command = input("\nWhat would you like to do? \n\nType a direction or quit to exit game: ").strip().lower().split()
     first_char = command[0]
     command = first_char[0]
 
-    if command == 'q':
+    if command == 'q' or 'quit':
         print('\nQuiters are for Losers!!!\n')
         break
 
-    if command == 'n':
+    if command == 'n' or 'north':
         set_direction(player, command)
-    elif command == 's':
+    elif command == 's' or 'south':
         set_direction(player, command)
-    elif command == 'e':
+    elif command == 'e' or 'east':
         set_direction(player, command)
-    elif command == 'w':
+    elif command == 'w' or 'west':
         set_direction(player, command)
     else:
         print('\nYou make no sense, try again')
